@@ -24,8 +24,11 @@ export default function Header() {
                     />
                 </div>
                 <Navbar />
-                <ActionIcon />
-                <SearchAndTheme />
+
+                <div className="flex">
+                    <ActionIcon />
+                    <SearchAndTheme />
+                </div>
             </div>
         </header>
     )
