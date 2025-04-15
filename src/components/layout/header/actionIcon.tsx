@@ -6,17 +6,17 @@ import { BiLogoYoutube } from "react-icons/bi";
 export default function ActionIcon() {
     const icons = [
         {
-            blackIcon: <BiLogoFacebook size={20} color="black" />,
+            blackIcon: <BiLogoFacebook size={20} className="text-foreground" />,
             blueIcon: <BiLogoFacebook size={20} color="#3B82F6" />,
             href: 'https://facebook.com/',
         },
         {
-            blackIcon: <AiOutlineX size={20} color="black" />,
+            blackIcon: <AiOutlineX size={20} className="text-foreground" />,
             blueIcon: <AiOutlineX size={20} color="#3B82F6" />,
             href: 'https://x.com/',
         },
         {
-            blackIcon: <BiLogoYoutube size={20} color="black" />,
+            blackIcon: <BiLogoYoutube size={20} className="text-foreground" />,
             blueIcon: <BiLogoYoutube size={20} color="#3B82F6" />,
             href: 'https://youtube.com/',
         },
@@ -32,7 +32,7 @@ export default function ActionIcon() {
         href: string;
     }) => {
         return (
-            <Link href={href} className="relative w-9 h-9 flex items-center justify-center bg-white rounded-full border border-gray-300 overflow-hidden group">
+            <Link href={href} className="relative w-9 h-9 flex items-center justify-center bg-background rounded-full border border-gray-300 overflow-hidden group">
                 <div className="absolute transition-all duration-300 transform group-hover:-translate-y-full group-hover:opacity-0">
                     {blackIcon}
                 </div>
