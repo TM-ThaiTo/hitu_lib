@@ -8,7 +8,7 @@ import {
     DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 import { useChangeLocale, useCurrentLocale } from "~/locales/client";
-import { Button } from "../ui/button";
+import { Button } from "~/components/ui/button";
 
 const locales = [
     {
