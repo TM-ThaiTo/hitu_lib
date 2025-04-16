@@ -1,6 +1,6 @@
 
 import Navbar from "~/components/layout/header/navbar"
-import { getLocaleHeader } from "~/constants/getLocale";
+import { getLocaleHeader } from "~/locales/get-locale";
 
 export default async function Header() {
     const headerText = await getLocaleHeader();

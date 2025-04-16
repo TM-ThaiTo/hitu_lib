@@ -13,7 +13,7 @@ import { Sheet, SheetTrigger, SheetContent } from "~/components/ui/sheet";
 import { Menu } from "lucide-react";
 import Icons from "~/components/share/icons";
 import { LocaleHeaderTypes } from "~/types/locale";
-import ActionIcon from "~/components/layout/header/actionIcon";
+import ActionIcon from "~/components/layout/header/action-icon";
 
 const styles = cn(
     "relative inline-block text-gray-800 text-sm font-bold uppercase cursor-pointer flex items-center text-foreground whitespace-nowrap",
