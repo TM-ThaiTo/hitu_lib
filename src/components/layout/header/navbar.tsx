@@ -17,9 +17,9 @@ import ActionIcon from "~/components/layout/header/actionIcon";
 
 const styles = cn(
     "relative inline-block text-gray-800 text-sm font-bold uppercase cursor-pointer flex items-center text-foreground whitespace-nowrap",
-    "hover:text-blue-[#0d6efd]",
+    "hover:text-blue-600",
     "after:content-[''] after:absolute after:left-0 after:-bottom-[5px] after:h-[2px] after:w-full",
-    "after:scale-x-0 after:origin-left after:bg-blue-[#0d6efd]",
+    "after:scale-x-0 after:origin-left after:bg-blue-600",
     "after:transition-transform after:duration-300 after:ease-out",
     "hover:after:scale-x-100"
 );
