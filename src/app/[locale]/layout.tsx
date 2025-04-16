@@ -5,6 +5,7 @@ import "../globals.css";
 import Header from "~/components/layout/header";
 import { cn } from "~/lib/utils";
 import ThemeProvider from "~/components/share/theme-provider";
+import Footer from "~/components/layout/footder";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default async function RootLayout({
           <main>
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
