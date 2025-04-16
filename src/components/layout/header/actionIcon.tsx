@@ -2,6 +2,9 @@ import Link from "next/link";
 import { AiOutlineX } from "react-icons/ai";
 import { BiLogoFacebook } from "react-icons/bi";
 import { BiLogoYoutube } from "react-icons/bi";
+import LocaleToggler from "~/components/share/locale-toggler";
+import SearchButton from "~/components/share/search-button";
+import ThemeToggle from "~/components/share/theme-toggle";
 
 export default function ActionIcon() {
     const icons = [
@@ -45,7 +48,7 @@ export default function ActionIcon() {
 
     return (
         <div className="flex items-center space-x-4">
-            <div className="flex gap-2 p-2 justify-center">
+            <div className="flex gap-2 pl-2 justify-center">
                 {icons.map((icon, index) => (
                     <IconButton
                         key={index}
@@ -54,6 +57,11 @@ export default function ActionIcon() {
                         blueIcon={icon.blueIcon}
                     />
                 ))}
+            </div>
+            <div className="flex gap-2 justify-center">
+                <ThemeToggle />
+                <LocaleToggler />
+                <SearchButton />
             </div>
         </div>
     );
