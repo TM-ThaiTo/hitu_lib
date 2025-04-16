@@ -3,18 +3,10 @@ import Image from "next/image"
 import Navbar from "~/components/layout/header/navbar"
 import ActionIcon from "~/components/layout/header/actionIcon"
 import SearchAndTheme from "~/components/layout/header/search_theme"
-import { getScopedI18n } from "~/locales/server";
+import { getLocaleHeader } from "~/constants/getLocale";
 
 export default async function Header() {
-    const scopedT = await getScopedI18n("header");
-    const headerText = {
-        home: scopedT('home'),
-        intro: scopedT('intro'),
-        guide: scopedT('guide'),
-        product: scopedT('product'),
-        service: scopedT('service'),
-        resources: scopedT('resources'),
-    };
+    const headerText = await getLocaleHeader();
 
     return (
         <header className="w-full border-blue-600 bg-background shadow-md text-foreground">

@@ -10,6 +10,7 @@ import {
     DropdownMenuItem,
 } from "~/components/ui/dropdown-menu"
 import Icons from "~/components/share/icons";
+import { LocaleHeaderTypes } from "~/types/locale";
 
 const styles = cn(
     "relative inline-block text-gray-800 text-sm font-bold uppercase cursor-pointer flex items-center text-foreground",
@@ -21,17 +22,9 @@ const styles = cn(
 );
 
 export default function Navbar({
-    headerText
+    headerText,
 }: {
-    headerText: {
-        home: string,
-        intro: string,
-        guide: string,
-        service: string,
-        product: string,
-        resources: string,
-        [key: string]: string;
-    };
+    headerText: LocaleHeaderTypes;
 }) {
     const actions = [
         { label: headerText.home, type: 1, href: '/' },
