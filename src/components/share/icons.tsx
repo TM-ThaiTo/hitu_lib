@@ -23,12 +23,13 @@ import {
     // Twitter,
     // User,
     // X,
+    ChevronDown,
     Laptop,
     Moon,
     SunMedium,
     Search,
     type LucideIcon,
-    type LucideProps,
+    // type LucideProps,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -39,6 +40,7 @@ const Icons = {
     moon: Moon,
     search: Search,
     laptop: Laptop,
+    chevronDown: ChevronDown,
     // download: DownloadCloud,
     // edit: Edit3,
     // home: Home,
