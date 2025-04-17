@@ -1,5 +1,6 @@
 import Banner from '~/components/layout/home/banner';
 import EventAndNew from '~/components/layout/home/event-news';
+import LibraryFeatures from '~/components/layout/home/library-features';
 
 const urls = [
   {
@@ -34,11 +35,9 @@ const urls = [
 
 export default function Home() {
   return (
-    <div className="container h-auto">
-      <div className='mt-4 flex flex-col'>
-        <Banner urls={urls} />
-        <EventAndNew />
-      </div>
+    <div className="container flex flex-col gap-6">
+      <Banner urls={urls} />
+      <EventAndNew />
     </div>
   );
 }
