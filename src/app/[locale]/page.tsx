@@ -1,4 +1,5 @@
 import Banner from '~/components/layout/home/banner';
+import EventAndNew from '~/components/layout/home/event-news';
 
 const urls = [
   {
@@ -31,11 +32,12 @@ const urls = [
   }
 ];
 
-export default function CustomSwiper() {
+export default function Home() {
   return (
-    <div className="container">
-      <div className='mt-4'>
+    <div className="container h-auto">
+      <div className='mt-4 flex flex-col'>
         <Banner urls={urls} />
+        <EventAndNew />
       </div>
     </div>
   );
