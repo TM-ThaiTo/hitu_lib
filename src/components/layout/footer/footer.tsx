@@ -2,7 +2,7 @@ import { FaHome } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#0959ca] text-white py-6 px-4 md:px-10 2xl:px-0 shadow-lg md:text-base">
+        <footer className="bg-[#0959ca] text-white py-6 px-4 md:px-10 2xl:px-0 shadow-lg md:text-base mt-5">
             <div className="container mx-auto">
                 <div className="text-base md:text-md font-bold mb-4 flex items-center justify-center gap-2 text-center">
                     <FaHome className="text-xl md:text-2xl" />

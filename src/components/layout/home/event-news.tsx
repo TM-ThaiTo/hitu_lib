@@ -37,35 +37,34 @@ const newsData = [
 
 export default function EventAndNew() {
     return (
-        <>
-            <section className='max-w-[1074px] w-full bg-white mt-5'>
-                <div className="relative rounded-[5px] shadow-lg p-6">
-                    <div className="max-w-screen-xl mx-auto">
-                        <TitleSlider title={'Tin tức & Sự kiện'} />
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
-                            {newsData?.map((item, index) => (
-                                <div key={index} className="group flex items-start space-x-4 p-4 border border-gray-100 rounded-lg bg-white shadow-sm transition" >
-                                    <div className="max-w-[118px] w-full h-[80px] relative rounded overflow-hidden">
-                                        <Image
-                                            src={item.image}
-                                            alt="News"
-                                            fill
-                                            className="object-fill transition-transform duration-300 group-hover:scale-105 w-[118px] h-[60px]"
-                                        />
-                                    </div>
-
-                                    <p className="text-sm font-medium text-gray-800 transition-colors duration-300 group-hover:text-blue-600 line-clamp-4 pl-4">
-                                        <Link href={item.link}>
-                                            {item.title}
-                                        </Link>
+        <section className='w-full max-w-[1074px] mt-5'>
+            <div className="relative rounded-md shadow-lg p-6 bg-white">
+                <TitleSlider title="Tin tức & Sự kiện" />
+                <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+                    {newsData.map((item, index) => (
+                        <div
+                            key={index}
+                            className="group flex items-start gap-4 p-4 border border-gray-100 rounded-md bg-white shadow-sm hover:shadow-md transition-all duration-300"
+                        >
+                            <div className="relative w-[120px] h-[80px] flex-shrink-0 rounded overflow-hidden">
+                                <Image
+                                    src={item.image}
+                                    alt={item.title}
+                                    fill
+                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                            </div>
+                            <div className="flex-1">
+                                <Link href={item.link}>
+                                    <p className="text-sm font-medium text-gray-800 group-hover:text-blue-600 transition-colors duration-300 line-clamp-3">
+                                        {item.title}
                                     </p>
-                                </div>
-                            ))}
+                                </Link>
+                            </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
-            </section>
-        </>
-    )
+            </div>
+        </section>
+    );
 }

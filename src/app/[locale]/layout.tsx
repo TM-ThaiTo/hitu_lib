@@ -43,15 +43,7 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           <main>
-            <div className="container flex flex-col lg:flex-row">
-              <div className="w-full max-w-[1100px]">
-                {children}
-              </div>
-
-              <div className="lg:ml-6 mt-6 lg:mt-0">
-                <LibraryFeatures />
-              </div>
-            </div>
+            {children}
           </main>
           <Footer />
         </ThemeProvider>

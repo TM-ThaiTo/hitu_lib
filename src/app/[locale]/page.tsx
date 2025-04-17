@@ -1,4 +1,5 @@
 import Banner from '~/components/layout/home/banner';
+import BookGrid from '~/components/layout/home/book-grid';
 import EventAndNew from '~/components/layout/home/event-news';
 import LibraryFeatures from '~/components/layout/home/library-features';
 
@@ -35,9 +36,15 @@ const urls = [
 
 export default function Home() {
   return (
-    <div className="container flex flex-col gap-6">
-      <Banner urls={urls} />
-      <EventAndNew />
+    <div className="container flex flex-col px-9 2xl:px-0 mt-10">
+      <div className='w-full flex flex-col lg:flex-row '>
+        <div className="w-full max-w-[1100px]">
+          <Banner urls={urls} />
+          <EventAndNew />
+        </div>
+        <LibraryFeatures />
+      </div>
+      <BookGrid />
     </div>
   );
 }
